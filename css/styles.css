@@ -2,6 +2,41 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.main-header {
+  text-align: center;
+}
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  padding: 4px 0 4px 0;
+}
+
+.location {
+  margin-left: 15px;
+}
+
+.book-your-meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F3F3;
+}
+
+.book-your-meal h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.book-your-meal p {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
 .foto {
   max-height: 250px;
   min-width: 250px;
@@ -15,4 +50,39 @@ body {
   background-color: aqua;
   max-width: 450px;
   min-width: 250px;
+}
+
+.explore {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word;
+  border-radius: 25px;
+  padding: 15px;
+  background: linear-gradient(201deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  margin-bottom: 40px;
+}
+
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.how-it-works h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.instruction-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #f6f6f6;
+  height: 60px;
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  padding-left: 5px;
 }/*# sourceMappingURL=styles.css.map */
