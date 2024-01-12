@@ -1,17 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  background: #F3F3F3;
 }
 
 .main-header {
   text-align: center;
+  height: 80px;
+}
+
+.image-logo {
+  padding-top: 24px;
+}
+
+.top-box {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .location-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EAEAEA;
+  background: #EAEAEA;
   padding: 4px 0 4px 0;
+  height: 50px;
 }
 
 .location {
@@ -23,44 +39,89 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F3F3F3;
+  background: #F6F6F6;
+  padding-bottom: 24px;
 }
-
 .book-your-meal h2 {
   font-size: 24px;
   font-weight: 700;
+  padding-top: 24px;
+}
+.book-your-meal p {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #101010;
+  word-wrap: break-word;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
-.book-your-meal p {
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #F3F3F3;
+  padding: 8px;
+  height: 100%;
 }
 
 .foto {
-  max-height: 250px;
-  min-width: 250px;
-}
-
-.icon {
-  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
 }
 
 .card {
-  background-color: aqua;
+  background: #FFFFFF;
   max-width: 450px;
   min-width: 250px;
+  position: relative;
+  border-radius: 24px;
+  margin: 0 12px 24px 12px;
+}
+.card-title {
+  margin: 10px;
+}
+.card-location {
+  margin-left: 10px;
+  margin-top: 1px;
+  font-weight: lighter;
+}
+.card .icon-one {
+  position: absolute;
+  bottom: 35px;
+  right: 25px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 5px;
+}
+.card .green-square {
+  background: #99E2D0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  justify-content: center;
+  color: #008766;
+  padding: 8px 24px;
+  border-radius: 3px;
 }
 
 .explore {
-  color: white;
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: 500;
   word-wrap: break-word;
   border-radius: 25px;
-  padding: 15px;
-  background: linear-gradient(201deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  background: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 40px;
 }
 
@@ -68,21 +129,77 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  background: #FFFFFF;
+  margin-left: 8px;
 }
-
 .how-it-works h2 {
   font-size: 24px;
   font-weight: 700;
+  padding-left: 16px;
+}
+.how-it-works i {
+  padding-left: 32px;
 }
 
 .instruction-container {
   display: flex;
   align-items: center;
-  gap: 30px;
-  background-color: #f6f6f6;
+  gap: 20px;
+  background: #F6F6F6;
   height: 60px;
-  margin: 15px;
+  margin: 8px;
   border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  padding-left: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding-left: 16px;
+  font-size: large;
+}
+
+.number-three {
+  margin-bottom: 56px;
+}
+
+.instruction-number {
+  background: #9356DC;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2px;
+  position: absolute;
+  left: 5px;
+}
+
+.rest-lock {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  background: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+footer span {
+  color: #FFFFFF;
+}
+footer li {
+  padding-bottom: 16px;
+}
+footer .icon-footer {
+  padding-left: 8px;
+}
+
+.footer-my-food {
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  list-style: none;
 }/*# sourceMappingURL=styles.css.map */
