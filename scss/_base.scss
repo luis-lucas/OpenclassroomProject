@@ -1,0 +1,27 @@
+$purple: #9356DC;
+$pink: #FF79DA;
+$green: #99E2D0;
+$green-font: #008766;
+$white: #FFFFFF;
+$grey-2: #EAEAEA;
+$menus-bacground: #F3F3F3;
+$black: #101010;
+$footer: #353535;
+$shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+$gradient: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
+$background-2: #F6F6F6;
+$icon-grey: #7E7E7E;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    font-family: 'Roboto', sans-serif;
+    background: $menus-bacground;
+    }
+    
+   

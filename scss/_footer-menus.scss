@@ -1,0 +1,35 @@
+.footer-menus {
+    background: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 24px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    span {
+    color: $white;
+    }
+    ul{
+        padding: 25px 22px;
+    }
+    li {
+    padding-bottom: 16px;
+    font-size: 16px;
+    }
+    .icon-footer {
+    padding-left: 8px;
+    }
+    .footer-icon {
+    color: $white
+    }
+    }
+
+.footer-my-food {
+    color: $white;
+    font-size: 18px;
+    font-family: 'Shrikhand', serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    list-style: none;
+    }
