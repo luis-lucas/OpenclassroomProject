@@ -16,6 +16,7 @@ body {
 
 .image-logo {
   padding-top: 24px;
+  width: 180px;
 }
 
 * {
@@ -27,42 +28,6 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   background: #F3F3F3;
-}
-
-footer {
-  background: #101010;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 24px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-footer span {
-  color: #FFFFFF;
-}
-footer ul {
-  padding: 25px 22px;
-}
-footer li {
-  padding-bottom: 16px;
-  font-size: 16px;
-}
-footer .icon-footer {
-  padding-left: 8px;
-}
-footer .footer-icon {
-  color: #FFFFFF;
-}
-
-.footer-my-food {
-  color: #FFFFFF;
-  font-size: 18px;
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  word-wrap: break-word;
-  list-style: none;
 }
 
 .main-section {
@@ -262,42 +227,6 @@ body {
   background: #F3F3F3;
 }
 
-.footer-menus {
-  background: #101010;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 24px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-.footer-menus span {
-  color: #FFFFFF;
-}
-.footer-menus ul {
-  padding: 25px 22px;
-}
-.footer-menus li {
-  padding-bottom: 16px;
-  font-size: 16px;
-}
-.footer-menus .icon-footer {
-  padding-left: 8px;
-}
-.footer-menus .footer-icon {
-  color: #FFFFFF;
-}
-
-.footer-my-food {
-  color: #FFFFFF;
-  font-size: 18px;
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  word-wrap: break-word;
-  list-style: none;
-}
-
 .header-menus {
   display: flex;
   justify-content: center;
@@ -314,7 +243,21 @@ body {
 }
 
 .main-menus-container {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  background: #F3F3F3;
+  margin-top: -40px;
+  z-index: 10;
+  position: relative;
+  border-radius: 40px 40px 0 0;
+}
+.main-menus-container h2 {
+  font-weight: 80;
+}
+
+.kitchen-west-img {
+  max-width: 500px;
+  margin: 0;
 }
 
 .picture-menu {
@@ -335,7 +278,7 @@ body {
 .container-menus .title-icon {
   display: flex;
   align-items: center;
-  padding: 32px 0 0 22px;
+  padding: 32px 0 0 12px;
 }
 .container-menus .fa-heart {
   position: absolute;
@@ -343,8 +286,82 @@ body {
   font-size: 24px;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.menu .menu-title {
+  padding: 28px 16px 8px 12px;
+  font-weight: 400;
+}
+.menu .menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+  background: #F6F6F6;
+  height: 72px;
+  margin: 8px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 350;
+}
+.menu .menu-container .side-dish {
+  font-size: 15px;
+  font-weight: 100;
+}
+.menu .menu-container .price {
+  padding-right: 8px;
+  font-size: 14px;
+}
+.menu .menu-container span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.explore {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  word-wrap: break-word;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding: 18px;
+  background: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.rest-lock {
+  text-decoration: none;
+  color: white;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #F3F3F3;
+}
+
 footer {
-  background: #101010;
+  background: #353535;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

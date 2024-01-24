@@ -1,8 +1,6 @@
 @import "base";
 
 
-@import "footer-menus";
-
 
 .header-menus {
 display: flex;
@@ -19,7 +17,21 @@ padding-bottom: 16px;
 }
 }
 .main-menus-container{
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    background: #F3F3F3;
+    margin-top: -40px;
+    z-index: 10;
+    position: relative;
+    border-radius: 40px 40px 0 0;
+    
+    h2 {
+        font-weight: 80;
+    }
+}
+.kitchen-west-img {
+    max-width: 500px;
+    margin: 0;
 }
 .picture-menu {
 width: 100%;
@@ -38,7 +50,7 @@ position: relative;
 .title-icon {
     display: flex;
     align-items: center;
-    padding: 32px 0 0 22px;
+    padding: 32px 0 0 12px;
 }
 .fa-heart {
     position: absolute;
@@ -47,3 +59,63 @@ position: relative;
     
 }
 }
+.menu {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+.menu-title {
+    padding: 28px 16px 8px 12px ;
+    font-weight: 400;
+}
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    background: $background-2;
+    height: 72px;
+    margin: 8px;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 350;
+   
+    .side-dish {
+        font-size: 15px;
+        font-weight: 100;
+    } 
+    .price {
+        padding-right: 8px;
+        font-size: 14px;
+    }
+    span {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+}
+}
+.explore {
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    word-wrap: break-word;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 18px;
+    background: $gradient;
+    box-shadow: $shadow;
+  }
+  .rest-lock {
+    text-decoration: none;
+    color: white;
+  }
+ .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+ }
