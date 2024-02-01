@@ -12,6 +12,10 @@ $gradient: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
 $background-2: #F6F6F6;
 $icon-grey: #7E7E7E;
 
+@mixin container-desktop {
+    max-width: 1320px;
+    margin: 0 auto;
+}
 
 * {
     box-sizing: border-box;
@@ -21,7 +25,8 @@ $icon-grey: #7E7E7E;
 
     body {
     font-family: 'Roboto', sans-serif;
-    background: $menus-bacground;
     }
-    
+    .background-gray {
+        background: $menus-bacground;
+    }
    

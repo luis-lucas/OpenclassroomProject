@@ -14,6 +14,7 @@ padding-bottom: 16px;
     position:absolute;
     left: 24px;
     top: 26px;
+    color: $black;
 }
 }
 .main-menus-container{
@@ -30,12 +31,14 @@ padding-bottom: 16px;
     }
 }
 .kitchen-west-img {
-    max-width: 500px;
+    width: 100%;
+    height: 338px;
     margin: 0;
 }
 .picture-menu {
 width: 100%;
 height: 100%;
+object-fit: cover;
 }
 
 .container-menus {
@@ -63,6 +66,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
+
 .menu-title {
     padding: 28px 16px 8px 12px ;
     font-weight: 400;
@@ -108,14 +112,36 @@ justify-content: flex-start;
     padding: 18px;
     background: $gradient;
     box-shadow: $shadow;
-  }
-  .rest-lock {
+    }
+    .rest-lock {
     text-decoration: none;
     color: white;
-  }
- .order {
+    }
+    .order {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px;
- }
+    text-align: center;
+    }
+    @media (min-width: 768px) {
+    
+    .main-menus-container {
+        @include container-desktop;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+           .fa-heart {
+            position: absolute;
+            left: 250px;
+           }
+        }
+        .menu {
+        width: 75%;
+    }
+        .order {
+            padding: 14px 86px;
+        }
+    }
