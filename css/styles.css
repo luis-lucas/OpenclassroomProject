@@ -36,6 +36,46 @@ body {
   background: #F3F3F3;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: hide-overlay 3s forwards;
+}
+.overlay h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.loading {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #008766;
+  border-radius: 50%;
+  border-top-color: #99E2D0;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes hide-overlay {
+  to {
+    visibility: hidden;
+  }
+}
 .main-section {
   position: relative;
   height: 100%;
@@ -90,7 +130,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   background: #F3F3F3;
-  padding: 20px;
+  padding: 20px 40px;
   height: 100%;
 }
 .restaurants h2 {
@@ -112,25 +152,11 @@ body {
   position: relative;
   border-radius: 24px;
 }
-.card-title {
-  margin: 10px;
-}
-.card-location {
-  margin-left: 10px;
-  margin-top: 1px;
-  font-weight: lighter;
-}
-.card .icon-one {
-  position: absolute;
-  bottom: 35px;
-  right: 25px;
-  color: #7E7E7E;
-}
 .card-content {
   display: flex;
-  flex-direction: column;
-  margin: 0 0 20px 8px;
-  padding-bottom: 12px;
+  padding: 12px;
+  align-items: center;
+  justify-content: space-between;
 }
 .card .green-square {
   background: #99E2D0;
@@ -142,6 +168,20 @@ body {
   color: #008766;
   padding: 8px 24px;
   border-radius: 3px;
+}
+.card .heart {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+.card .heart:hover {
+  background: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
 }
 
 .restaurant-link {
@@ -167,12 +207,20 @@ body {
   color: white;
 }
 
+.explore-shadow {
+  transition: 0.2s ease-in-out;
+}
+.explore-shadow:hover {
+  background: linear-gradient(194deg, #ae70fa 0%, #fd99e1 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
 .how-it-works {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: relative;
   background: #FFFFFF;
+  padding: 0 20px;
 }
 .how-it-works .how-it-works-title {
   font-size: 24px;
@@ -200,6 +248,7 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   padding-left: 16px;
   font-size: large;
+  position: relative;
 }
 
 .number-three {
@@ -217,7 +266,7 @@ body {
   align-items: center;
   padding-top: 2px;
   position: absolute;
-  left: 8px;
+  left: -16px;
 }
 
 @media (min-width: 768px) {
@@ -258,9 +307,8 @@ body {
     padding-left: 2px;
     font-size: 16px;
   }
-  .instruction-number {
-    position: absolute;
-    left: auto;
+  .book {
+    font-size: 40px;
   }
   .how-it-works-title {
     width: 100%;
@@ -338,10 +386,24 @@ body {
   align-items: center;
   padding: 32px 0 0 12px;
 }
-.container-menus .fa-heart {
+.container-menus .position-right {
   position: absolute;
   right: 28px;
   font-size: 24px;
+}
+.container-menus .heart {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+.container-menus .heart:hover {
+  background: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
 }
 
 .menu {
@@ -353,33 +415,57 @@ body {
   padding: 28px 16px 8px 12px;
   font-weight: 400;
 }
+.menu .menu-title::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #008766;
+  width: 50px;
+  margin-top: 4px;
+}
 .menu .menu-container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   gap: 5px;
   background: #F6F6F6;
-  height: 72px;
   margin: 8px;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 16px;
   font-size: 16px;
   font-weight: 350;
+  cursor: pointer;
+  overflow: hidden;
 }
-.menu .menu-container .side-dish {
-  font-size: 15px;
-  font-weight: 100;
+.menu .menu-container:hover {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.425);
+}
+.menu .menu-container:hover .check-mark {
+  width: 80px;
+  transform: translateX(0);
+}
+.menu .menu-container .menu-details {
+  padding: 16px;
+}
+.menu .menu-container .menu-details .dish {
+  margin-bottom: 8px;
 }
 .menu .menu-container .price {
-  padding-right: 8px;
   font-size: 14px;
+  align-self: flex-end;
+  padding: 16px;
+  margin-left: auto;
 }
-.menu .menu-container span {
+.menu .menu-container .check-mark {
+  background: #99E2D0;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
   align-items: center;
+  width: 0;
+  transform: translateX(120px);
+  transition: 0.3s ease-in-out;
+}
+.menu .menu-container .check-mark i {
+  font-size: 30px;
+  color: white;
 }
 
 .explore {
@@ -406,6 +492,11 @@ body {
   align-items: center;
   margin: 50px;
   text-align: center;
+  transition: 0.2s ease-in-out;
+}
+.order:hover {
+  background: linear-gradient(194deg, #ae70fa 0%, #fd99e1 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {

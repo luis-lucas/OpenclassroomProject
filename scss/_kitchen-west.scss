@@ -25,7 +25,7 @@ padding-bottom: 16px;
     z-index: 10;
     position: relative;
     border-radius: 40px 40px 0 0;
-    
+
     h2 {
         font-weight: 80;
     }
@@ -42,25 +42,42 @@ object-fit: cover;
 }
 
 .container-menus {
-position: relative;
-.kitchen-west-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Shrikhand', serif;
-    font-weight: 100;
-}
-.title-icon {
-    display: flex;
-    align-items: center;
-    padding: 32px 0 0 12px;
-}
-.fa-heart {
-    position: absolute;
-    right: 28px;
-    font-size: 24px;
-    
-}
+    position: relative;
+
+    .kitchen-west-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: 'Shrikhand', serif;
+        font-weight: 100;
+    }
+    .title-icon {
+        display: flex;
+        align-items: center;
+        padding: 32px 0 0 12px;
+    }
+    .position-right {
+        position: absolute;
+        right: 28px;
+        font-size: 24px;
+    }
+
+    .heart {
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        &:hover {
+            background: $gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;  
+           
+        }
+        
+    }
 }
 .menu {
 display: flex;
@@ -70,37 +87,73 @@ justify-content: flex-start;
 .menu-title {
     padding: 28px 16px 8px 12px ;
     font-weight: 400;
+
+    &::after {
+        content: "";
+        display: block;
+        border-top: 2px solid $green-font;
+        width: 50px;
+        margin-top: 4px;
+    }
 }
 .menu-container {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     gap: 5px;
     background: $background-2;
-    height: 72px;
     margin: 8px;
     border-radius: 20px;
     box-shadow: $shadow;
-    padding: 16px;
     font-size: 16px;
     font-weight: 350;
-   
-    .side-dish {
-        font-size: 15px;
-        font-weight: 100;
+    cursor: pointer;
+    overflow: hidden;
+     
+    &:hover {
+        background: $white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.425);;
+    }
+
+    &:hover .check-mark {
+        width: 80px;
+        transform: translateX(0);
+    }
+
+    
+    .menu-details {
+        padding: 16px;
+        .dish {
+            margin-bottom: 8px;
+
+        }
     } 
+
+
     .price {
-        padding-right: 8px;
         font-size: 14px;
+        align-self: flex-end;
+        padding: 16px;
+        margin-left: auto;
     }
-    span {
+
+    .check-mark {
+        background: $green;
         display: flex;
-        justify-content: space-between;
-        width: 100%;
+        justify-content: center;
         align-items: center;
+        width: 0;
+        transform: translateX(120px);
+        transition: 0.3s ease-in-out;
+       
+        
+        i {
+            font-size: 30px;
+            color: white;
+        }
     }
 }
+
 }
+
 .explore {
     color: $white;
     font-size: 16px;
@@ -123,6 +176,11 @@ justify-content: flex-start;
     align-items: center;
     margin: 50px;
     text-align: center;
+    transition: 0.2s ease-in-out;
+    &:hover {
+        background: linear-gradient(194deg, #ae70fa 0%, #fd99e1 100%);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    }
     }
     @media (min-width: 768px) {
     
