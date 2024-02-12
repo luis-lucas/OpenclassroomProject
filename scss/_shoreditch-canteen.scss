@@ -60,11 +60,11 @@ object-fit: cover;
     .title-icon {
         display: flex;
         align-items: center;
-        padding: 32px 0 0 12px;
+        padding: 32px 0 0 0px;
     }
     .position-right {
         position: absolute;
-        right: 6px;
+        right: 36px;
         top: 32px;
         font-size: 24px;
     }
@@ -195,8 +195,8 @@ padding: 12px;
         position: relative;
         width: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         padding-left: 26px;
     }
     

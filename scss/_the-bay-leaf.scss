@@ -60,7 +60,7 @@ object-fit: cover;
     }
     .position-right {
         position: absolute;
-        right: -80px;
+        right: 36px;
         top: 32px;
         font-size: 24px;
     }
@@ -181,11 +181,19 @@ padding: 12px;
         
     .fa-heart {
             position: absolute;
-            left: 250px;
+            right: 250px;
             }
         }
         .menu {
         width: 85%;
+    }
+    .container-menus {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 26px;
     }
     
 } 

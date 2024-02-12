@@ -1,0 +1,204 @@
+@import "base";
+
+
+
+.header-menus {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+background: $white;
+padding-bottom: 16px;
+.fa-arrow-left {
+    font-size: 30px;
+    position:absolute;
+    left: 24px;
+    top: 26px;
+    color: $black;
+}
+}
+.main-menus-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F3F3F3;
+    margin-top: -40px;
+    z-index: 10;
+    position: relative;
+    border-radius: 40px 40px 0 0;
+
+    h2 {
+        font-weight: 80;
+    }
+}
+.kitchen-west-img {
+    width: 100%;
+    height: 338px;
+    margin: 0;
+}
+.picture-menu {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.container-menus {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 26px;
+
+    .kitchen-west-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: 'Shrikhand', serif;
+        font-weight: 100;
+    }
+    .title-icon {
+        display: flex;
+        align-items: center;
+        padding: 32px 0 0 12px;
+    }
+    .position-right {
+        position: absolute;
+        right: 36px;
+        top: 32px;
+        font-size: 24px;
+    }
+
+    .heart {
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+        &:hover {
+            background: $gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;  
+           
+        }
+        
+    }
+}
+.menu {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: 100%;
+padding: 12px;
+
+.menu-title {
+    padding: 28px 16px 8px 12px ;
+    font-weight: 400;
+
+    &::after {
+        content: "";
+        display: block;
+        border-top: 2px solid $green-font;
+        width: 50px;
+        margin-top: 4px;
+    }
+}
+.menu-container {
+    display: flex;
+    gap: 5px;
+    background: $background-2;
+    margin: 8px;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    font-size: 16px;
+    font-weight: 350;
+    cursor: pointer;
+    overflow: hidden;
+     
+    &:hover {
+        background: $white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.425);;
+    }
+
+    &:hover .check-mark {
+        width: 80px;
+        transform: translateX(0);
+    }
+
+    
+    .menu-details {
+        padding: 16px;
+        .dish {
+            margin-bottom: 8px;
+
+        }
+    } 
+
+
+    .price {
+        font-size: 14px;
+        align-self: flex-end;
+        padding: 16px;
+        margin-left: auto;
+    }
+
+    .check-mark {
+        background: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0;
+        transform: translateX(120px);
+        transition: 0.3s ease-in-out;
+        
+        i {
+            font-size: 30px;
+            color: white;
+        }
+    }
+}
+}
+
+
+    .order {
+        margin: 50px;
+        text-align: center;
+        transition: 0.2s ease-in-out;
+        padding: 18px 62px;
+        transition: 0.2s ease-in-out;
+  &:hover {
+      background: linear-gradient(194deg, #ae70fa 0%, #fd99e1 100%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  }
+    }
+
+    @media (min-width: 768px) {
+    
+    .main-menus-container {
+        @include container-desktop;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    .fa-heart {
+            position: absolute;
+            right: 250px;
+            }
+        }
+        .menu {
+        width: 85%;
+    }
+    .container-menus {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 26px;
+    }
+    
+} 
+   
