@@ -43,8 +43,7 @@ height: 100%;
 object-fit: cover;
 }
 
-.container-menus {
-    position: relative;
+.container-menus {  
     width: 100%;
     display: flex;
     align-items: center;
@@ -52,21 +51,20 @@ object-fit: cover;
 
     .kitchen-west-header {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         font-family: 'Shrikhand', serif;
         font-weight: 100;
+        width: 100%;
+        gap: 100px;
     }
     .title-icon {
-        display: flex;
-        align-items: center;
-        padding: 32px 0 0 12px;
+        margin: 32px 0 32px 0;
     }
     .position-right {
-        position: absolute;
-        right: 6px;
-        top: 32px;
+       
         font-size: 24px;
+        padding-right: 52px;
     }
 
     .heart {
@@ -182,23 +180,17 @@ padding: 12px;
         display: flex;
         justify-content: center;
         align-items: center;
-        
-    .fa-heart {
-            position: absolute;
-            right: 250px;
-            }
+
+        .kitchen-west-header  {
+            justify-content: center;
+            align-items: center;
+         }
+
         }
         .menu {
         width: 85%;
     }
-    .container-menus {
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 26px;
-    }
+    
     
 } 
    
